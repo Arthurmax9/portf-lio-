@@ -1,0 +1,105 @@
+.carousel-title {
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* Ajuste a altura conforme necessário */
+  margin-top: 20px; /* Adicione uma margem acima do título */
+}
+
+.carousel-title h2 {
+  margin-top: 10px; /* Adicione um espaçamento entre o título e as imagens */
+}
+
+.carousel {
+  position: relative;
+  height: auto; /* Alterado para altura automática */
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.856);
+  margin: auto;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  overflow: hidden; /* Removendo a sombra da expansão */
+  border-radius: 10px;
+  justify-content: space-around;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+ margin: 0 20px;
+  margin-right: 20px; /* Adiciona espaço entre as imagens */
+  justify-content: space-around;
+}
+.image {
+  width: 100%; /* Alterado para ocupar 100% da largura do contêiner pai */
+  max-height: 400px; /* Alterado para altura automática */
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  height: auto;
+}
+
+.image:hover {
+  transform: scale(1.2);
+}
+
+.image-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.image-container:hover .image-info {
+  opacity: 1;
+}
+
+.button {
+  position: absolute;
+  border-radius: 40px;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #00233b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#prev {
+  left: 10px; /* Adicionei uma margem à esquerda para o botão 'prev' */
+}
+
+#next {
+  right: 10px; /* Adicionei uma margem à direita para o botão 'next' */
+}
+
+/* Responsividade para telas pequenas */
+@media screen and (max-width: 600px) {
+  .image-container {
+    width: 100%;
+    max-width: none; /* Remova a largura máxima em telas pequenas */
+    margin-right: 0; /* Remove o espaço entre as imagens em telas pequenas */
+  }
+
+  .carousel {
+    max-width: 70%;
+    /* Defina a largura máxima desejada */
+  }
+
+  .button {
+    width: auto;
+    position: absolute;
+    top: calc(50% - 25px); /* Centraliza verticalmente */
+  }
+}
