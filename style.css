@@ -1,0 +1,29 @@
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #000;
+    color: white;
+  }
+
+  
+  
+  .logo {
+    flex: 0 0 auto;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 1rem;
+  }
+  
